@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marketing Mix Modeling - Landing Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <style>
+    .badge { @apply inline-flex items-center justify-center rounded-full; }
+  </style>
+</head>
+<body class="bg-white text-gray-900 font-sans">
+
+  <!-- Header / Nav -->
+  <header class="py-5 border-b border-gray-100 bg-white sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-4">
+      <div class="flex items-center">
+        <img src="data:image/png;base64,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" alt="Logo" class="h-10 mr-3" />
+        <span class="text-xl font-bold text-orange-600">Marketing Mix Modeling</span>
+      </div>
+      <nav class="hidden md:flex space-x-6 font-medium">
+        <a href="#hero" class="hover:text-orange-600">Trang chủ</a>
+        <a href="#challenges" class="hover:text-orange-600">Thách thức</a>
+        <a href="#what-is-mmm" class="hover:text-orange-600">MMM là gì</a>
+        <a href="#why" class="hover:text-orange-600">Vì sao chọn</a>
+        <a href="#process" class="hover:text-orange-600">Quy trình</a>
+        <a href="#testimonials" class="hover:text-orange-600">Khách hàng</a>
+        <a href="#contact" class="hover:text-orange-600">Liên hệ</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 1. Hero Section -->
+  <section id="hero" class="py-20">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-5">Tối Ưu Hóa Hiệu Quả Đầu Tư Marketing Với Marketing Mix Modeling</h1>
+      <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-8">Giải pháp khoa học dữ liệu cho quyết định Marketing chiến lược bằng phân tích chuyên sâu, hỗ trợ các quyết định minh bạch và chính xác</p>
+      <a href="#contact" class="inline-flex items-center bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700">Khám phá Tư vấn ngay</a>
+      <!-- simple abstract illustration -->
+      <div class="mt-10 flex items-center justify-center">
+        <svg viewBox="0 0 360 160" class="w-full max-w-3xl">
+          <defs>
+            <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0%" stop-color="#fb923c"></stop>
+              <stop offset="100%" stop-color="#fdba74"></stop>
+            </linearGradient>
+          </defs>
+          <circle cx="60" cy="80" r="28" fill="url(#g)" opacity=".2"></circle>
+          <circle cx="150" cy="50" r="22" fill="url(#g)" opacity=".25"></circle>
+          <circle cx="240" cy="100" r="26" fill="url(#g)" opacity=".2"></circle>
+          <circle cx="315" cy="55" r="18" fill="url(#g)" opacity=".18"></circle>
+          <path d="M60 80C90 70 120 60 150 50s60 10 90 30 50-5 75-25" fill="none" stroke="#fb923c" stroke-width="2"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+  <!-- Thách thức trong đo lường hiệu quả Marketing hiện nay -->
+  <section id="challenges" class="py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">Thách thức trong đo lường hiệu quả Marketing hiện nay</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        
+        <div class="p-6 bg-white border border-gray-200 rounded-xl shadow-sm">
+          <div class="text-orange-600 mb-3"><svg viewBox="0 0 24 24" class="h-8 w-8"><path d="M4 6h6v6H4zM14 6h6v6h-6zM9 12h6v6H9z" fill="currentColor" opacity=".2"/><path d="M7 6v12M17 6v12M6 9h12M6 15h12" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></div>
+          <h3 class="text-xl font-semibold text-orange-600 mb-2">Quyết định tích hợp</h3>
+          <p class="text-gray-700">Hiệu quả marketing chỉ tối ưu khi quyết định dựa trên thước đo tích hợp gắn liền với kết quả kinh doanh.</p>
+        </div>
+
+        <div class="p-6 bg-white border border-gray-200 rounded-xl shadow-sm">
+          <div class="text-orange-600 mb-3"><svg viewBox="0 0 24 24" class="h-8 w-8"><path d="M12 4v4M12 16v4M4 12h4m8 0h4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></div>
+          <h3 class="text-xl font-semibold text-orange-600 mb-2">Kết nối dữ liệu</h3>
+          <p class="text-gray-700">Thách thức trong việc kết nối dữ liệu từ nhiều nền tảng on/offline gây khó khăn trong việc đo lường toàn diện.</p>
+        </div>
+
+        <div class="p-6 bg-white border border-gray-200 rounded-xl shadow-sm">
+          <div class="text-orange-600 mb-3"><svg viewBox="0 0 24 24" class="h-8 w-8"><path d="M12 6v12m6-6H6" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></div>
+          <h3 class="text-xl font-semibold text-orange-600 mb-2">Đo lường chiến lược</h3>
+          <p class="text-gray-700">Khó khăn trong việc liên kết đo lường hiệu quả marketing với mục tiêu kinh doanh dài hạn.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  
+
+
+  
+  <!-- Hạn chế của các phương pháp đo lường truyền thống -->
+  <section class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-gray-900 mb-12">Hạn chế của các phương pháp đo lường truyền thống</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="p-6 bg-gray-50 rounded-lg shadow"><div class="text-orange-600 mb-3"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m6.364 1.636l-.707.707M20 12h-1M17.657 17.657l-.707-.707M12 20v-1M6.343 17.657l.707-.707M4 12h1M6.343 6.343l.707.707M12 8a4 4 0 100 8 4 4 0 000-8z"/></svg></div>Phụ thuộc vào Cookie, khó duy trì trong kỷ nguyên cookie-less.</div>
+        <div class="p-6 bg-gray-50 rounded-lg shadow"><div class="text-orange-600 mb-3"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24"><path d="M4 6a2 2 0 012-2h12a2 2 0 012 2v2H4V6zm0 4h16v8a2 2 0 01-2 2H6a2 2 0 01-2-2v-8z"/></svg></div>Khó tích hợp dữ liệu on–offline.</div>
+        <div class="p-6 bg-gray-50 rounded-lg shadow"><div class="text-orange-600 mb-3"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24"><path d="M4 6h6v12H4zM14 10h6v8h-6z"/></svg></div>Sai lệch trong phân bổ công trạng giữa các kênh.</div>
+        <div class="p-6 bg-gray-50 rounded-lg shadow"><div class="text-orange-600 mb-3"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 11h4v2h-6V7h2v6z"/></svg></div>Thiếu góc nhìn chiến lược gắn với kết quả kinh doanh.</div>
+      </div>
+    </div>
+  </section>
+
+
+  
+
+  
+
+
+  
+
+  <!-- 3. MMM là gì -->
+  <section id="what-is-mmm" class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-4">Ưu điểm Marketing Mix Modeling.</h2>
+      <p class="text-center text-gray-700 max-w-3xl mx-auto mb-10">Marketing Mix Modeling (MMM) là một hình phân tích thống kê cho phép các nhà tiếp thị xác định tác động trên nhiều kênh truyền (online/offline), các hoạt động marketing và các yếu tố thị trường đối với doanh số bán hàng hoặc các chỉ số kinh doanh khác. Thông qua phân tích dữ liệu Marketing lịch sử, MMM giúp doanh nghiệp giải bài toán:</p>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="p-6 bg-white border border-gray-200 rounded-xl shadow-sm text-center">
+          <div class="text-orange-600 mb-3"><svg viewBox="0 0 24 24" class="h-8 w-8"><path d="M4 7h16v10H4z" fill="currentColor" opacity=".1"/><path d="M4 7h16v10H4zM8 7v10M16 7v10" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M6 12h4" stroke="currentColor" stroke-width="2"/></svg></div>
+          <h3 class="text-lg font-semibold text-orange-600 mb-2">Phân bổ ngân sách</h3>
+          <p>Đưa ra quyết định phân bổ ngân sách thông minh cho tương lai.</p>
+        </div>
+        <div class="p-6 bg-white border border-gray-200 rounded-xl shadow-sm text-center">
+          <div class="text-orange-600 mb-3"><svg viewBox="0 0 24 24" class="h-8 w-8"><path d="M4 19h16" stroke="currentColor" stroke-width="1.5"/><rect x="6" y="10" width="3" height="9" fill="currentColor"/><rect x="11" y="7" width="3" height="12" fill="currentColor" opacity=".7"/><rect x="16" y="12" width="3" height="7" fill="currentColor" opacity=".4"/></svg></div>
+          <h3 class="text-lg font-semibold text-orange-600 mb-2">Đo lường hiệu quả hoạt động Marketing</h3>
+          <p>Xác định ROI, doanh số và các KPI của từng kênh Marketing.</p>
+        </div>
+        <div class="p-6 bg-white border border-gray-200 rounded-xl shadow-sm text-center">
+          <div class="text-orange-600 mb-3"><svg viewBox="0 0 24 24" class="h-8 w-8"><path d="M5 17l5-5 4 4 5-8" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="19" cy="8" r="2" fill="currentColor"/></svg></div>
+          <h3 class="text-lg font-semibold text-orange-600 mb-2">Dự đoán hiệu quả</h3>
+          <p>Dự báo doanh số dựa trên các kịch bản phân bổ ngân sách khác nhau.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Tại sao lựa chọn -->
+  <section id="why" class="py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">Tại sao lựa chọn Marketing Mix Modeling của Lead Consulting</h2>
+      <div class="grid md:grid-cols-4 gap-6">
+        <div class="p-6 bg-white border border-gray-200 rounded-xl shadow-sm text-center">
+          <div class="text-orange-600 mb-3"><svg viewBox="0 0 24 24" class="h-8 w-8"><path d="M4 7h6v10H4zM14 7h6v6h-6z" fill="currentColor" opacity=".2"/><path d="M4 7h6v10H4zM14 7h6v6h-6z" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></div>
+          <h3 class="text-lg font-semibold text-orange-600 mb-2">Mô hình hiện đại</h3>
+          <p>Sử dụng các mô hình thống kê và machine learning tiên tiến nhất.</p>
+        </div>
+        <div class="p-6 bg-white border border-gray-200 rounded-xl shadow-sm text-center">
+          <div class="text-orange-600 mb-3"><svg viewBox="0 0 24 24" class="h-8 w-8"><path d="M12 3v5M12 16v5M3 12h5M16 12h5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="3" fill="currentColor"/></svg></div>
+          <h3 class="text-lg font-semibold text-orange-600 mb-2">Phân tích chuyên sâu</h3>
+          <p>Báo cáo chi tiết và chuyên sâu, giúp bạn ra quyết định nhanh chóng.</p>
+        </div>
+        <div class="p-6 bg-white border border-gray-200 rounded-xl shadow-sm text-center">
+          <div class="text-orange-600 mb-3"><svg viewBox="0 0 24 24" class="h-8 w-8"><path d="M6 18h12v-2a4 4 0 00-4-4H10a4 4 0 00-4 4v2z" fill="currentColor" opacity=".15"/><circle cx="12" cy="8" r="3" stroke="currentColor" stroke-width="1.5" fill="white"/></svg></div>
+          <h3 class="text-lg font-semibold text-orange-600 mb-2">Tư vấn chiến lược</h3>
+          <p>Chiến lược phân tích được tư vấn riêng theo bài toán đặc thù của từng doanh nghiệp.</p>
+        </div>
+        <div class="p-6 bg-white border border-gray-200 rounded-xl shadow-sm text-center">
+          <div class="text-orange-600 mb-3"><svg viewBox="0 0 24 24" class="h-8 w-8"><path d="M12 3l7 3v6c0 5-3.5 8.5-7 9-3.5-.5-7-4-7-9V6l7-3z" stroke="currentColor" stroke-width="1.5" fill="currentColor" opacity=".1"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></div>
+          <h3 class="text-lg font-semibold text-orange-600 mb-2">Bảo mật dữ liệu</h3>
+          <p>Cam kết đảm bảo an toàn tuyệt đối cho mọi dữ liệu kinh doanh.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Quy trình thực hiện -->
+  <section id="process" class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">Quy trình thực hiện</h2>
+      <!-- Process rail -->
+      <div class="hidden md:block mb-10">
+        <div class="flex items-center justify-between">
+          <div class="flex-1 h-1 bg-orange-200"></div>
+          <div class="w-4 h-4 bg-orange-500 rounded-full mx-2"></div>
+          <div class="flex-1 h-1 bg-orange-200"></div>
+          <div class="w-4 h-4 bg-orange-500 rounded-full mx-2"></div>
+          <div class="flex-1 h-1 bg-orange-200"></div>
+          <div class="w-4 h-4 bg-orange-500 rounded-full mx-2"></div>
+          <div class="flex-1 h-1 bg-orange-200"></div>
+          <div class="w-4 h-4 bg-orange-500 rounded-full mx-2"></div>
+          <div class="flex-1 h-1 bg-orange-200"></div>
+          <div class="w-4 h-4 bg-orange-500 rounded-full mx-2"></div>
+          <div class="flex-1 h-1 bg-orange-200"></div>
+          <div class="w-4 h-4 bg-orange-500 rounded-full mx-2"></div>
+          <div class="flex-1 h-1 bg-orange-200"></div>
+        </div>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="p-6 bg-white border border-gray-200 rounded-xl shadow-sm">
+          <div class="text-orange-600 mb-3"><svg viewBox="0 0 24 24" class="h-8 w-8"><rect x="4" y="6" width="16" height="12" rx="2" fill="currentColor" opacity=".1"/><path d="M6 14h6M6 10h12" stroke="currentColor" stroke-width="1.5"/></svg></div>
+          <h3 class="font-semibold text-orange-600 mb-1">Bước 1 – Lựa chọn dữ liệu</h3>
+          <p>Xác định và thu thập những nguồn dữ liệu quan trọng phản ánh hoạt động marketing và kinh doanh.</p>
+        </div>
+        <div class="p-6 bg-white border border-gray-200 rounded-xl shadow-sm">
+          <div class="text-orange-600 mb-3"><svg viewBox="0 0 24 24" class="h-8 w-8"><rect x="4" y="6" width="16" height="12" rx="2" fill="currentColor" opacity=".1"/><path d="M6 14h6M6 10h12" stroke="currentColor" stroke-width="1.5"/></svg></div>
+          <h3 class="font-semibold text-orange-600 mb-1">Bước 2 – Làm sạch &amp; chuẩn hóa</h3>
+          <p>Biến dữ liệu rời rạc thành một bộ thông tin nhất quán và đáng tin cậy.</p>
+        </div>
+        <div class="p-6 bg-white border border-gray-200 rounded-xl shadow-sm">
+          <div class="text-orange-600 mb-3"><svg viewBox="0 0 24 24" class="h-8 w-8"><rect x="4" y="6" width="16" height="12" rx="2" fill="currentColor" opacity=".1"/><path d="M6 14h6M6 10h12" stroke="currentColor" stroke-width="1.5"/></svg></div>
+          <h3 class="font-semibold text-orange-600 mb-1">Bước 3 – Thiết lập mô hình</h3>
+          <p>Xây dựng khung phân tích để hiểu cách từng yếu tố marketing tác động đến kết quả kinh doanh.</p>
+        </div>
+        <div class="p-6 bg-white border border-gray-200 rounded-xl shadow-sm">
+          <div class="text-orange-600 mb-3"><svg viewBox="0 0 24 24" class="h-8 w-8"><rect x="4" y="6" width="16" height="12" rx="2" fill="currentColor" opacity=".1"/><path d="M6 14h6M6 10h12" stroke="currentColor" stroke-width="1.5"/></svg></div>
+          <h3 class="font-semibold text-orange-600 mb-1">Bước 4 – Huấn luyện mô hình</h3>
+          <p>Cho mô hình học từ dữ liệu lịch sử để nhận diện quy luật chi tiêu và hiệu quả.</p>
+        </div>
+        <div class="p-6 bg-white border border-gray-200 rounded-xl shadow-sm">
+          <div class="text-orange-600 mb-3"><svg viewBox="0 0 24 24" class="h-8 w-8"><rect x="4" y="6" width="16" height="12" rx="2" fill="currentColor" opacity=".1"/><path d="M6 14h6M6 10h12" stroke="currentColor" stroke-width="1.5"/></svg></div>
+          <h3 class="font-semibold text-orange-600 mb-1">Bước 5 – Kiểm chứng độ tin cậy</h3>
+          <p>Đánh giá mô hình bằng dự báo thực tế để đảm bảo tính chính xác và ổn định.</p>
+        </div>
+        <div class="p-6 bg-white border border-gray-200 rounded-xl shadow-sm">
+          <div class="text-orange-600 mb-3"><svg viewBox="0 0 24 24" class="h-8 w-8"><rect x="4" y="6" width="16" height="12" rx="2" fill="currentColor" opacity=".1"/><path d="M6 14h6M6 10h12" stroke="currentColor" stroke-width="1.5"/></svg></div>
+          <h3 class="font-semibold text-orange-600 mb-1">Bước 6 – Ứng dụng &amp; tối ưu</h3>
+          <p>Trực quan hóa kết quả và gợi ý chiến lược phân bổ ngân sách tối ưu cho tăng trưởng.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Khách hàng nói gì -->
+  <section id="testimonials" class="py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">Khách hàng nói gì về chúng tôi</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="p-6 bg-white border border-gray-200 rounded-xl shadow-sm">
+          <div class="text-orange-600 mb-3"><svg viewBox="0 0 24 24" class="h-8 w-8"><path d="M7 10h5v7H6v-5c0-1 .4-2 1-2zM16 10h5v7h-6v-5c0-1 .4-2 1-2z" fill="currentColor" opacity=".5"/></svg></div>
+          <p class="italic">“MMM giúp chúng tôi phân bổ ngân sách hiệu quả hơn và minh bạch hóa tác động từng kênh.”</p>
+          <p class="mt-3 font-semibold">— Khách hàng A</p>
+        </div>
+        <div class="p-6 bg-white border border-gray-200 rounded-xl shadow-sm">
+          <div class="text-orange-600 mb-3"><svg viewBox="0 0 24 24" class="h-8 w-8"><path d="M7 10h5v7H6v-5c0-1 .4-2 1-2zM16 10h5v7h-6v-5c0-1 .4-2 1-2z" fill="currentColor" opacity=".5"/></svg></div>
+          <p class="italic">“Báo cáo chi tiết, mô phỏng kịch bản rõ ràng, hỗ trợ ra quyết định rất nhanh.”</p>
+          <p class="mt-3 font-semibold">— Khách hàng B</p>
+        </div>
+        <div class="p-6 bg-white border border-gray-200 rounded-xl shadow-sm">
+          <div class="text-orange-600 mb-3"><svg viewBox="0 0 24 24" class="h-8 w-8"><path d="M7 10h5v7H6v-5c0-1 .4-2 1-2zM16 10h5v7h-6v-5c0-1 .4-2 1-2z" fill="currentColor" opacity=".5"/></svg></div>
+          <p class="italic">“Độ tin cậy cao và bảo mật dữ liệu đáp ứng yêu cầu nội bộ của chúng tôi.”</p>
+          <p class="mt-3 font-semibold">— Khách hàng C</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- CTA (text-only) -->
+  <section class="py-16 text-center">
+    <div class="max-w-3xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-3">Bắt đầu hành trình MMM ngay hôm nay</h2>
+      <p class="text-lg">Khám phá cách MMM giúp doanh nghiệp bạn tối ưu hóa ngân sách marketing và đưa ra quyết định chiến lược chính xác hơn.</p>
+    </div>
+  </section>
+
+
+  <!-- 7. Liên hệ -->
+  <section id="contact" class="py-20 bg-gray-900 text-white">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4">Liên hệ</h2>
+      <p class="mb-8">Hãy để lại thông tin để được tư vấn MMM cho doanh nghiệp của bạn.</p>
+      <form class="grid md:grid-cols-2 gap-4 text-left">
+        <input type="text" placeholder="Họ và tên" class="w-full px-4 py-3 rounded text-black" />
+        <input type="email" placeholder="Email" class="w-full px-4 py-3 rounded text-black" />
+        <input type="text" placeholder="Công ty" class="w-full px-4 py-3 rounded text-black md:col-span-2" />
+        <textarea placeholder="Nội dung" class="w-full px-4 py-3 rounded text-black md:col-span-2" rows="4"></textarea>
+        <div class="md:col-span-2 text-center">
+          <button type="submit" class="bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700">Gửi thông tin</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer class="py-6 text-center text-sm text-gray-500">
+    © 2025 Lead Consulting — Marketing Mix Modeling
+  </footer>
+</body>
+</html>
